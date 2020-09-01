@@ -1,0 +1,12 @@
+[package]
+name = "point-cloud-viewer"
+version = "0.1.0"
+authors = ["andre"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+iced = { git = "https://github.com/hecrj/iced", rev = "9b778006ce7a56b129cc779b5bad31931d5faf12", features = ["tokio"] }
+iced_native = { git = "https://github.com/hecrj/iced", rev = "9b778006ce7a56b129cc779b5bad31931d5faf12" }
+iced_graphics = { git = "https://github.com/hecrj/iced", rev = "9b778006ce7a56b129cc779b5bad31931d5faf12" }

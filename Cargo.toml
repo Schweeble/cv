@@ -13,6 +13,7 @@ members = [
     "nister-stewenius",
     "vslam-sandbox",
     "cv-reconstruction",
+    "point-cloud-viewer",
 ]
 
 [profile.dev]
