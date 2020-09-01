@@ -1,12 +1,20 @@
 [package]
 name = "point-cloud-viewer"
 version = "0.1.0"
-authors = ["andre"]
+authors = ["Schweeble"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-iced = { git = "https://github.com/hecrj/iced", rev = "9b778006ce7a56b129cc779b5bad31931d5faf12", features = ["tokio"] }
-iced_native = { git = "https://github.com/hecrj/iced", rev = "9b778006ce7a56b129cc779b5bad31931d5faf12" }
-iced_graphics = { git = "https://github.com/hecrj/iced", rev = "9b778006ce7a56b129cc779b5bad31931d5faf12" }
+bytemuck = "1.2.0"
+failure = "0.1.8"
+futures = "0.3.5"
+image = "0.23.8"
+shaderc = "0.6"
+wgpu = "0.5.0"
+winit = "0.22.2"
+nalgebra = "0.22.0"
+
+[build-dependencies]
+shaderc = "0.6"
