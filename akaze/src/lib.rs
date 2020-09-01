@@ -225,18 +225,19 @@ impl Akaze {
     /// ```
     /// use std::path::Path;
     /// let akaze = akaze::Akaze::default();
-    /// let (keypoints, descriptors) = akaze.extract(&image::open("res/0000000000.png").unwrap());
+    /// let (keypoints, descriptors) = akaze.extract(&image::open("../res/0000000000.png").unwrap());
     /// ```
     ///
     pub fn extract(&self, image: &DynamicImage) -> (Vec<KeyPoint>, Vec<BitArray<64>>) {
         let float_image = GrayFloatImage::from_dynamic(&image);
-        info!("Loaded a {} x {} image", image.width(), image.height());
         let mut evolutions = self.allocate_evolutions(image.width(), image.height());
         self.create_nonlinear_scale_space(&mut evolutions, &float_image);
-        trace!("Creating scale space finished.");
+        trace!("Finding image keypoints.");
         let keypoints = self.find_image_keypoints(&mut evolutions);
+        trace!("Extracting descriptors.");
         let descriptors = self.extract_descriptors(&evolutions, &keypoints);
         trace!("Computing descriptors finished.");
+        info!("Extracted {} features", keypoints.len());
         (keypoints, descriptors)
     }
 
@@ -256,7 +257,7 @@ impl Akaze {
     /// ```
     /// use std::path::Path;
     /// let akaze = akaze::Akaze::default();
-    /// let (keypoints, descriptors) = akaze.extract_path("res/0000000000.png").unwrap();
+    /// let (keypoints, descriptors) = akaze.extract_path("../res/0000000000.png").unwrap();
     /// ```
     ///
     pub fn extract_path(

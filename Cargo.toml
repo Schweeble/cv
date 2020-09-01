@@ -9,11 +9,14 @@ members = [
     "akaze",
     "eight-point",
     "lambda-twist",
-    "kpshow",
     "nister-stewenius",
-    "vslam-sandbox",
     "cv-reconstruction",
     "point-cloud-viewer",
+    "vslam-sandbox",
+    "kpdraw",
+    "imgshow",
+    "tutorial-chapters/chapter2-first-program",
+    "tutorial-chapters/chapter3-akaze-feature-extraction",
 ]
 
 [profile.dev]

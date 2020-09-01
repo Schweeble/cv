@@ -40,11 +40,13 @@ Here are some of the domains of computer vision that Rust CV intends to persue a
     * [ ] Fast Explicit Diffusion (FED) (implementation exists [within `akaze` crate](https://github.com/rust-cv/akaze/blob/a25ff0448d95600f10c69acb7e4f7d95045c1293/src/fed_tau.rs))
   * [ ] Contrast enhancement
     * [ ] Normalization ([Wikipedia](https://en.wikipedia.org/wiki/Normalization_(image_processing)))
-    * [ ] Histogram equalization ([Wikipedia](https://en.wikipedia.org/wiki/Histogram_equalization))
-  * [ ] Edge detection ([Wikipedia](https://en.wikipedia.org/wiki/Edge_detection)) & gradient extraction ([Wikipedia](https://en.wikipedia.org/wiki/Image_derivatives))
-    * [ ] Scharr filters (exists [within `akaze` crate](https://github.com/rust-cv/akaze/blob/a25ff0448d95600f10c69acb7e4f7d95045c1293/src/derivatives.rs))
-    * [ ] Sobel filter ([Wikipedia](https://en.wikipedia.org/wiki/Sobel_operator))
-    * [ ] Canny edge detector ([Wikipedia](https://en.wikipedia.org/wiki/Canny_edge_detector))
+    * [x] [Histogram equalization](https://docs.rs/imageproc/0.20.0/imageproc/contrast/fn.equalize_histogram.html) ([Wikipedia](https://en.wikipedia.org/wiki/Histogram_equalization))
+  * [x] Edge detection ([Wikipedia](https://en.wikipedia.org/wiki/Edge_detection)) & gradient extraction ([Wikipedia](https://en.wikipedia.org/wiki/Image_derivatives))
+    * [x] [Scharr filters](https://docs.rs/imageproc/0.20.0/imageproc/gradients/static.HORIZONTAL_SCHARR.html) (exists [within `akaze` crate](https://github.com/rust-cv/akaze/blob/a25ff0448d95600f10c69acb7e4f7d95045c1293/src/derivatives.rs))
+    * [x] [Sobel filter](https://docs.rs/imageproc/0.20.0/imageproc/gradients/fn.horizontal_sobel.html) ([Wikipedia](https://en.wikipedia.org/wiki/Sobel_operator))
+    * [x] [Canny edge detector](https://docs.rs/imageproc/0.20.0/imageproc/edges/fn.canny.html) ([Wikipedia](https://en.wikipedia.org/wiki/Canny_edge_detector))
+  * [x] Perceptual hash ([Wikipedia](https://en.wikipedia.org/wiki/Perceptual_hashing))
+    * [x] [aHash, dHash, and pHash](https://crates.io/crates/img_hash)
 * [ ] Photogrammetry
   * [ ] Feature extraction ([Wikipedia](https://en.wikipedia.org/wiki/Feature_detection_(computer_vision)))
     * [x] [AKAZE](https://docs.rs/akaze/0.3.1/akaze/struct.Akaze.html)
